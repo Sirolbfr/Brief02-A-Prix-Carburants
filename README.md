@@ -1,4 +1,4 @@
-# Brief B02-A — Le carburant est-il vraiment plus cher chez nous ?
+# Brief B02-A — Le carburant est-il vraiment plus cher chez nous ? - Groupe : Taima & Loris
 
 ## Informations
 
@@ -69,6 +69,9 @@ fréquent ? Sur quelles stations ? Vous lui soumettez votre formulation ; il val
 
 Une fois la question cadrée, vous explorez le fichier et construisez vos premiers TCD.
 
+##### Problématique :
+> Le prix du gazole médian en station d'autoroute ou de route est-il plus élevé dans les Hauts-de-France que dans les autres régions ?
+
 **Jeudi matin — apport (1 h 30) puis production.**
 Apport « choisir le bon graphique », puis production libre.
 
@@ -91,6 +94,48 @@ graphique est à refaire.
    elles viennent, et décidez — en le justifiant — ce que vous en faites.
 5. **Produire trois graphiques** de trois familles différentes, titrés, légendés, sourcés.
 6. **Proposer un titre d'article** et un chapô de cinq lignes, défendables devant le rédacteur en chef.
+
+#### Réponse 1 :
+> Les Hauts-de-France se situent plutôt bas dans le classement du prix médian - en se basant sur le prix du gazole uniquement, ce qui peut amener à des changements si on se base sur les autres carburants.
+
+#### Réponse 2 :
+> Un prix régional moyen n'aurait pas vraiment de sens : les stations sont séparées dans deux catégories : Route et Autoroute. Les stations Route ont un prix médian ou moyen beaucoup moins élevé que les stations Autoroute. Cela fausse et dénue de sens la moyenne de l'ensemble des stations.
+> La dispersion des station des Hauts-de-France est plutôt dans la moyenne, 0.084€.
+> Quant à la dispersion du prix dans les stations d'une même ville, même si on se concentre sur les stations Route, on observe une différence entre maximum et minimum assez prononcée : 0.118€ de différence en moyenne.
+> Si on inclut aussi les stations Autoroute, on obtient une différence moyenne de 0.124€.
+
+#### Réponse 3 :
+##### TCD A - Comparaison du prix du gazole par type de station par région
+> On peut voir que le prix varie énormément selon le lieu où on prend le carburant. Ce n'est pas forcément que dans un sens, mais il reste une tendance plutôt robuste : les prix en autoroute sont quasiment systématiquement plus élevés, à l'exception de la région Ile-de-France, où le carburant en Autoroute est moins cher de 14 centimes.
+> Le gazole a été choisi car il présente le plus grand dataset : il est présent dans toutes les stations.
+##### TCD B - Comparaison des prix médians et moyen entre les grandes régions de France par carburant
+> Grâce à ce TCD, nous pouvons voir que les régions à l'Est de la France ont un carburant avec un prix médian un peu plus élevé mais aussi un prix moyen plus élevé que les autres régions.
+##### TCD C - Comparaison de la dispersion des prix du gazole par région (HDF / reste de la France)
+>On peut justifier la création de ce TCD pour étudier la dispersion du prix pour chaque région afin de mettre en évidence l'hétérogénité possible, le consommateur saura alors qu'il pourra penser à changer de station pour profiter d'un prix plus compétitif.
+
+#### Réponse 4 :
+> Sur le carburant E85, on peut voir 6 valeurs atypiques, elles sont comprises entre 1.970€ et 2.249€, creusant un écart de presque 50 centimes avec les autres. On choisit de les retirer car les prix correspondent sûrement à un autre carburant (SP95/Gazole), sauf qu'on a aucun autre moyen de vérifier la véracité de ces valeurs (ou de vérifier que c'est le bon carburant).
+> Sur le GPLc, il y a 2 valeurs atypiques plus élevées d'au moins 50 centimes, on choisit de les retirer, comme les valuers du E85, pour les mêmes raisons.
+> Sur le SP95, il y en a une. Pareil, on agit de la même manière.
+
+#### Réponse 6 :
+> Paie-t-on vraiment le carburant plus cher en Hauts-de-France que dans le reste de la France ?
+> 
+> Pour cela, nous alors d'abord étudier le prix au litre médian du gazole. On prend cet indicateur car le prix du gazole est renseigné dans 100% des stations présentes dans le dataset et la médiane car c'est un indicateur assez représentatif, contrairement à la moyenne. 
+> Avec une médiane de 2,379 €/L (gazole), les Hauts-de-France affichent des prix faisant partie des moins élevés parmi les régions étudiées. Les écarts de prix entre les stations et surtout les types de station (Route/Autoroute) montrent toutefois que les tarifs peuvent varier selon les zones géographiques. En effet, l'écrat-type du prix au litre du gazole est égal à 0.054€ pour la région Hauts-de-France. Aussi, la différence en pourcentage du prix du gazole en autoroute sur celle en station de route est de +1.70% (en HDF), cela montre qu'il faut bien choisir où on se ravitaille.
+> Aussi, on a comparé les prix médians des autres carburants entre les HDF et le reste de la France, les HDF conservent une place assez basse dans le classement (moins cher que les autres régions).
+> Source : data.economie.gouv.fr, données extraites le 18/09/2026. Licence Ouverte 2.0
+
+#### Explication limites :
+##### Limite 1 - Déclaration des prix par station décalée dans le temps :
+> Les données sont mises à jour séparément selon la station, quand on extrait les données, elles ne sont dont pas systématiquement à jour.
+
+##### Limite 2 - Stations publiques & déclarantes :
+> Un autre facteur qui limite l'exactitude de nos données serait que leur étendue se limite aux stations qui déclarent leurs prix.
+
+##### Limite 3 - Volume de carburant vendu non communiqué :
+> Les données reflètent uniquement les prix de carburant par station, sans prendre en compte l'affluence / le volume vendu de carburant, ce qui reflète beaucoup moins la réalité : si une station vend beaucoup plus de carburant qu'une autre, si on questionne le consomateur sur le montant qu'il a payé, en médiane, ca sera le prix de la station avec le volume vendu le plus élevé.
+> En résumé, une station qui vend beaucoup de carburant compte donc autant dans le calcul qu’une station qui en vend peu.
 
 **Questions guidantes.** Une moyenne calculée sur des stations donne-t-elle le prix payé par les
 automobilistes, ou le prix affiché par les stations ? Est-ce la même chose ? Si deux régions ont la
